@@ -32,6 +32,15 @@
 
 雙擊 `index.html` 即可離線瀏覽。
 
+多語版本：
+
+- `index.html`：繁體中文主版
+- `index.zh-CN.html`：簡體中文版本
+- `index.en.html`：英文版本
+- `index.ja.html`：日文版本
+
+對應資料檔位於 `data/skills-and-connectors.<locale>.json` 與 `data/skills-and-connectors.<locale>.csv`。
+
 若瀏覽器限制本機剪貼簿功能，可在本資料夾執行：
 
 ```bash
@@ -72,12 +81,16 @@ DATA-LICENSE.md
 - 實際功能取決於平台、帳號方案、版本、安裝狀態與權限。
 - 「適配模式」為依任務特性產生的使用建議，不是平台官方逐項認證。
 - 尚未逐筆完成 650 筆官方來源驗證；未驗證項目會標示「待逐筆查證」。
+- 簡體中文為 OpenCC 轉換基線；英文與日文為機器翻譯基線，皆保留「待人工覆核」狀態，不應視為最終人工審校版本。
 - 本專案不是 Anthropic、Claude 或任何第三方平台的官方產品。
 
 ## 相關文件
 
 - [TRANSLATION_REVIEW.md](TRANSLATION_REVIEW.md)：翻譯品質評估
 - [TRANSLATION_COVERAGE_AUDIT.md](TRANSLATION_COVERAGE_AUDIT.md)：中文覆蓋檢查
+- [README.zh-CN.md](README.zh-CN.md)：簡體中文說明
+- [README.en.md](README.en.md)：英文說明
+- [README.ja.md](README.ja.md)：日文說明
 - [GLOSSARY.md](GLOSSARY.md)：術語規則
 - [SOURCES_AND_SCOPE.md](SOURCES_AND_SCOPE.md)：來源與範圍
 - [SOURCE_VERIFICATION_GUIDE.md](SOURCE_VERIFICATION_GUIDE.md)：逐筆來源補齊方式
@@ -88,4 +101,3 @@ DATA-LICENSE.md
 ## 專案身份
 
 整理與介面設計：UNO
-
