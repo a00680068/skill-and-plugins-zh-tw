@@ -1,0 +1,77 @@
+[
+  {
+    "English": "Skill",
+    "TraditionalChinese": "技能",
+    "Explanation": "可重複使用的工作指令、流程與專業方法。"
+  },
+  {
+    "English": "Plugin",
+    "TraditionalChinese": "外掛／擴充包",
+    "Explanation": "用來安裝與分享技能、工具或整合設定的封裝形式。"
+  },
+  {
+    "English": "Connector",
+    "TraditionalChinese": "連結器",
+    "Explanation": "讓 Claude 連接外部服務、資料與可執行動作的介接層。"
+  },
+  {
+    "English": "Brief",
+    "TraditionalChinese": "需求簡報／任務摘要",
+    "Explanation": "說明目標、受眾、限制與交付需求。"
+  },
+  {
+    "English": "redline",
+    "TraditionalChinese": "修訂標記版",
+    "Explanation": "顯示新增、刪除與修改內容的文件版本。"
+  },
+  {
+    "English": "schema",
+    "TraditionalChinese": "資料結構定義",
+    "Explanation": "規範資料欄位、型別與關係。"
+  },
+  {
+    "English": "Artifact",
+    "TraditionalChinese": "可互動成果物",
+    "Explanation": "由 AI 產生並可檢視、編輯或互動的成果。"
+  },
+  {
+    "English": "pipeline",
+    "TraditionalChinese": "處理流程／管線",
+    "Explanation": "資料或任務依序經過多個處理階段。"
+  },
+  {
+    "English": "onboarding",
+    "TraditionalChinese": "到職／導入流程",
+    "Explanation": "依情境指新人到職、客戶導入或產品啟用。"
+  },
+  {
+    "English": "enrichment",
+    "TraditionalChinese": "資料補全",
+    "Explanation": "為既有名單補充聯絡方式、職稱或公司資訊。"
+  },
+  {
+    "English": "repository / repo",
+    "TraditionalChinese": "程式碼儲存庫",
+    "Explanation": "保存程式碼、版本紀錄與協作內容。"
+  },
+  {
+    "English": "webhook",
+    "TraditionalChinese": "事件回呼",
+    "Explanation": "事件發生時自動將資料送到指定端點。"
+  },
+  {
+    "English": "playbook",
+    "TraditionalChinese": "作業手冊",
+    "Explanation": "可重複採用的策略、步驟與處理規則。"
+  },
+  {
+    "English": "workflow",
+    "TraditionalChinese": "工作流程",
+    "Explanation": "一組依序或依條件執行的任務步驟。"
+  },
+  {
+    "English": "dashboard",
+    "TraditionalChinese": "儀表板",
+    "Explanation": "集中顯示指標、狀態與圖表的介面。"
+  }
+]

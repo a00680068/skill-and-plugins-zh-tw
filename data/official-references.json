@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "Skill",
+    "Url": "https://docs.anthropic.com/en/docs/claude-code/skills",
+    "Title": "Extend Claude with skills",
+    "VerifiedAt": "2026-06-19",
+    "Scope": "資源類型參考"
+  },
+  {
+    "Type": "Connector",
+    "Url": "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
+    "Title": "Use connectors to extend Claude's capabilities",
+    "VerifiedAt": "2026-06-19",
+    "Scope": "資源類型參考"
+  },
+  {
+    "Type": "Claude Code",
+    "Url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "Title": "Claude Code overview",
+    "VerifiedAt": "2026-06-19",
+    "Scope": "模式定位參考"
+  },
+  {
+    "Type": "Claude Cowork",
+    "Url": "https://www.anthropic.com/product/claude-cowork",
+    "Title": "Claude Cowork",
+    "VerifiedAt": "2026-06-19",
+    "Scope": "模式定位參考"
+  },
+  {
+    "Type": "Plugin extension",
+    "Url": "https://docs.anthropic.com/en/docs/claude-code/hooks-guide",
+    "Title": "Automate actions with hooks",
+    "VerifiedAt": "2026-06-19",
+    "Scope": "擴充方式參考"
+  }
+]
