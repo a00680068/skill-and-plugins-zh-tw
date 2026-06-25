@@ -1,0 +1,31 @@
+name: Source verification
+description: Add or correct official source information for an item.
+title: "[Source] "
+labels: ["source-verification", "needs-review"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Item name
+      description: English name or localized name.
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Official source URL
+      description: Prefer official documentation, product pages, or vendor support pages.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence summary
+      description: Briefly explain what the source confirms.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Mention version, date, availability limits, or account requirements if known.

@@ -20,10 +20,15 @@ This is the English version of `Skill & Plugins`, a public-safe directory for br
 
 The English version is a machine-translation baseline generated from the Traditional Chinese source. It keeps a pending human-review status and should not be treated as a final editorial localization.
 
+## Sharing and Contributions
+
+- Use [LAUNCH_KIT.md](LAUNCH_KIT.md) for suggested GitHub metadata, social posts, and launch sequencing.
+- Open issues for translation fixes, source verification, classification errors, or connector updates.
+- Star the repository if you want to find the directory again later.
+
 ## Important Limits
 
 - This project is not an official product of Anthropic, Claude, or any third-party platform.
 - Listed items are not guaranteed to be installed or immediately available.
 - Actual availability depends on platform, account plan, version, installation status, and permissions.
 - Item-level official source verification is still incomplete.
-

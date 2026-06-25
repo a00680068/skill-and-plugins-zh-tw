@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a00680068.github.io/skill-and-plugins-zh-tw/sitemap.xml

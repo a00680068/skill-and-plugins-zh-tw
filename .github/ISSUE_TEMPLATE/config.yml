@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Source verification guide
+    url: https://github.com/a00680068/skill-and-plugins-zh-tw/blob/main/SOURCE_VERIFICATION_GUIDE.md
+    about: Read this before submitting official source updates.

@@ -1,0 +1,36 @@
+name: Translation fix
+description: Report a translation, terminology, or localization issue.
+title: "[Translation] "
+labels: ["translation", "needs-review"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Item name
+      description: English name or localized name.
+      placeholder: "Example: google-drive, Gmail, meeting-summary"
+    validations:
+      required: true
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Locale
+      options:
+        - zh-TW
+        - zh-CN
+        - en
+        - ja
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What should be fixed?
+      description: Describe the current wording and your suggested wording.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context or source
+      description: Add official source links or usage context if available.

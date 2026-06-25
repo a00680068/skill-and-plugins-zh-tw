@@ -6,6 +6,7 @@ import json
 import re
 import sys
 import time
+from html import escape as html_escape
 from pathlib import Path
 from typing import Callable
 
@@ -21,6 +22,31 @@ HTML_FILES = {
     "zh-CN": "index.zh-CN.html",
     "en": "index.en.html",
     "ja": "index.ja.html",
+}
+
+SITE_BASE_URL = "https://a00680068.github.io/skill-and-plugins-zh-tw/"
+
+SEO_META = {
+    "zh-TW": {
+        "lang": "zh-Hant",
+        "title": "Skill & Plugins｜技能 & 連結器",
+        "description": "繁體中文 AI Skills、Plugin-type Skills 與 Connectors 公開索引，可搜尋、篩選、匯出 CSV，協助快速理解 Claude 與 AI 工作流程能力。",
+    },
+    "zh-CN": {
+        "lang": "zh-Hans",
+        "title": "Skill & Plugins｜技能 & 链接器",
+        "description": "简体中文 AI Skills、Plugin-type Skills 与 Connectors 公开索引，可搜索、筛选、导出 CSV，协助快速理解 Claude 与 AI 工作流程能力。",
+    },
+    "en": {
+        "lang": "en",
+        "title": "Skill & Plugins | Skills & Connectors",
+        "description": "A public-safe searchable catalog of AI skills, plugin-type skills, and connectors for Claude and AI workflows, with multilingual data and CSV exports.",
+    },
+    "ja": {
+        "lang": "ja",
+        "title": "Skill & Plugins｜スキル & コネクター",
+        "description": "Claude と AI ワークフロー向けのスキル、プラグイン型スキル、コネクターを検索できる公開安全版の多言語カタログです。",
+    },
 }
 
 FIELD_NAMES = [
@@ -994,11 +1020,55 @@ def localize_runtime_blocks(html: str, locale: str) -> str:
     return html
 
 
+def page_url(locale: str) -> str:
+    filename = HTML_FILES[locale]
+    return SITE_BASE_URL if filename == "index.html" else SITE_BASE_URL + filename
+
+
+def inject_seo_meta(html: str, locale: str) -> str:
+    meta = SEO_META[locale]
+    html = re.sub(r'\n<meta name="description" content="[^"]*">', "", html)
+    html = re.sub(r'\n<meta name="robots" content="[^"]*">', "", html)
+    html = re.sub(r'\n<meta property="og:[^"]+" content="[^"]*">', "", html)
+    html = re.sub(r'\n<meta name="twitter:[^"]+" content="[^"]*">', "", html)
+    html = re.sub(r'\n<link rel="canonical" href="[^"]+">', "", html)
+    html = re.sub(r'\n<link rel="alternate" hreflang="[^"]+" href="[^"]+">', "", html)
+
+    title = html_escape(meta["title"], quote=True)
+    description = html_escape(meta["description"], quote=True)
+    url = html_escape(page_url(locale), quote=True)
+    tags = [
+        f'<meta name="description" content="{description}">',
+        '<meta name="robots" content="index,follow">',
+        f'<link rel="canonical" href="{url}">',
+    ]
+    for alt_locale, alt_meta in SEO_META.items():
+        tags.append(
+            f'<link rel="alternate" hreflang="{alt_meta["lang"]}" href="{html_escape(page_url(alt_locale), quote=True)}">'
+        )
+    tags.extend(
+        [
+            f'<link rel="alternate" hreflang="x-default" href="{html_escape(SITE_BASE_URL, quote=True)}">',
+            '<meta property="og:type" content="website">',
+            f'<meta property="og:title" content="{title}">',
+            f'<meta property="og:description" content="{description}">',
+            f'<meta property="og:url" content="{url}">',
+            '<meta property="og:site_name" content="Skill & Plugins">',
+            '<meta name="twitter:card" content="summary">',
+            f'<meta name="twitter:title" content="{title}">',
+            f'<meta name="twitter:description" content="{description}">',
+        ]
+    )
+    block = "\n".join(tags) + "\n"
+    return re.sub(r'(<meta name="viewport" content="[^"]+">\n)', r"\1" + block, html, count=1)
+
+
 def generate_html(template: str, records: list[dict], locale: str, zh_cn: Callable[[str], str]) -> str:
     html = replace_data_block(template, records)
     html = inject_language_switcher(html, locale)
     html = localize_runtime_blocks(html, locale)
     html = apply_static_replacements(html, locale, zh_cn)
+    html = inject_seo_meta(html, locale)
     download_name = {
         "zh-TW": "技能與連結器_完整繁中對照表.csv",
         "zh-CN": "技能与连接器_完整简中对照表.csv",

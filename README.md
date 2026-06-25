@@ -1,8 +1,21 @@
 # Skill & Plugins｜技能 & 連結器
 
-一套以繁體中文整理的 AI 技能、外掛型技能與連結器查詢工具。
+一套以繁體中文為主的 AI 技能、外掛型技能與連結器查詢工具，協助 Claude 與 AI 工作者快速理解「哪些能力適合什麼任務」。
 
 這是公開安全版：不包含 U.AI Logo、私用設定、金鑰、token、本機絕對路徑或外部 CDN。
+
+> 可作為 GitHub Pages 靜態網站、離線 HTML 工具，或 AI 工具索引資料集使用。
+
+## 一句話定位
+
+給 AI 工作者、開發者、內容創作者與中文使用者使用的公開目錄：把零散的 Skills、Plugin-type Skills 與 Connectors 整理成可搜尋、可匯出、可離線部署的多語資料集。
+
+適合：
+
+- 想快速查找 Claude / AI 工作流程能力的人
+- 想建立中文 AI 工具索引、教學或內部知識庫的人
+- 想比較技能、連結器與適配模式的開發者
+- 想協助補來源、校對翻譯、改善中文術語的貢獻者
 
 ## 目前收錄
 
@@ -61,13 +74,34 @@ http://127.0.0.1:8765/
 
 ```text
 index.html
+index.*.html
 data/
 *.md
 LICENSE
 DATA-LICENSE.md
+.nojekyll
+robots.txt
+sitemap.xml
 ```
 
 本公開安全版已移除品牌圖片資產，因此不需要 `assets/` 資料夾。
+
+### GitHub Pages 快速設定
+
+1. 到 GitHub repo 的 `Settings` → `Pages`。
+2. Source 選 `Deploy from a branch`。
+3. Branch 選 `main`，folder 選 `/root`。
+4. 啟用後，把 repo About 的 Website 填成：
+
+```text
+https://a00680068.github.io/skill-and-plugins-zh-tw/
+```
+
+建議 repo topics：
+
+```text
+claude, claude-skills, ai-tools, connectors, mcp, prompt-engineering, zh-tw, localization, open-source
+```
 
 ## 授權
 
@@ -97,6 +131,16 @@ DATA-LICENSE.md
 - [SECURITY.md](SECURITY.md)：安全說明
 - [PRIVACY.md](PRIVACY.md)：隱私說明
 - [DISCLAIMER.md](DISCLAIMER.md)：免責聲明
+- [LAUNCH_KIT.md](LAUNCH_KIT.md)：公開發布、社群貼文與 GitHub 曝光設定建議
+
+## 幫忙擴散
+
+如果這個專案對你有幫助，可以：
+
+- 在 GitHub 按 Star，方便之後回來查。
+- 分享給正在使用 Claude、AI Agent、提示詞或自動化工具的朋友。
+- 開 issue 回報翻譯、分類、來源或功能建議。
+- 依 [SOURCE_VERIFICATION_GUIDE.md](SOURCE_VERIFICATION_GUIDE.md) 協助補官方來源。
 
 ## 專案身份
 
