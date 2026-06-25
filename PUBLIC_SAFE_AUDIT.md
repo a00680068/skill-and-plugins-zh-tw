@@ -24,11 +24,11 @@
 
 - 本機檔案 URL
 - Windows 絕對路徑
-- OneDrive 私人路徑
-- AppData 私人路徑
-- `Mac 私用`
-- `私用版`
-- `uai-logo`
+- 雲端同步私人路徑
+- 使用者設定檔私人路徑
+- 非公開版本標記
+- 內部維護版本標記
+- 內部品牌圖檔名稱
 - `<img>`
 - 外部 script src
 - 外部 CSS link
